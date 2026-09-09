@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="数字经济专硕考研择校测评，10道题测出你的考生画像，智能推荐适合的院校。">
+  <title>数字经济专硕考研择校测评</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 微信分享默认图 -->
+  <meta property="og:title" content="数字经济专硕考研择校测评">
+  <meta property="og:description" content="10道题，测出你适合考哪所数字经济专硕院校">
+</head>
+<body>
+  <div class="container">
+    <!-- 首页 -->
+    <section id="home-view" class="home-view">
+      <div class="brand-badge">数字经济笑开研 · 28届择校</div>
+      <h1 class="home-title">数字经济专硕<br>考研择校测评</h1>
+      <p class="home-subtitle">10道题，5档考生画像，智能匹配适合你的院校。不端不装，直接说人话。</p>
+
+      <div class="home-features">
+        <div class="feature-item">
+          <div class="feature-num">10</div>
+          <div class="feature-label">测评问题</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-num">5</div>
+          <div class="feature-label">考生画像</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-num">100+</div>
+          <div class="feature-label">院校库</div>
+        </div>
+      </div>
+
+      <div class="home-qr-wrap">
+        <div id="home-qr"></div>
+        <p>扫码直接参加测评 / 转发给研友</p>
+      </div>
+
+      <button id="start-btn" class="btn-primary">开始测评</button>
+    </section>
+
+    <!-- 答题页 -->
+    <section id="quiz-view" class="quiz-view hidden">
+      <div class="quiz-header">
+        <h3>择校测评</h3>
+        <div class="progress-wrap">
+          <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div id="progress-text" class="progress-text">1 / 10</div>
+      </div>
+
+      <div id="question-container"></div>
+
+      <div class="quiz-footer">
+        <button id="prev-btn" class="btn-secondary" disabled>上一题</button>
+        <button id="next-btn" class="btn-primary" disabled>下一题</button>
+      </div>
+    </section>
+
+    <!-- 结果页 -->
+    <section id="result-view" class="result-view hidden">
+      <div class="result-header">
+        <div id="result-icon" class="result-icon">🚀</div>
+        <div id="result-name" class="result-name">冲刺名校型</div>
+        <div id="result-short" class="result-short">背景硬、准备足、目标高</div>
+        <div class="ability-badge">综合匹配度 <strong id="ability-score">85</strong> 分</div>
+      </div>
+
+      <div id="result-desc" class="result-desc">
+        你的基础条件和备考投入都具备冲击名校的潜质。
+      </div>
+
+      <h3 class="section-title">📚 为你推荐的院校</h3>
+      <div id="schools-list" class="schools-list"></div>
+
+      <div class="lead-card">
+        <h3>还想更精准？</h3>
+        <p>添加扶摇学长，免费获取一对一择校分析和数字经济专硕备考资料。</p>
+        <div class="lead-qr">
+          <img src="assets/wechat-qr.jpg" alt="扶摇学长企业微信二维码">
+        </div>
+        <div class="wechat-id">微信：xiaokaiyan0018</div>
+      </div>
+
+      <div class="lead-card">
+        <h3>邀请研友一起测</h3>
+        <p>把测评分享给正在纠结择校的同学</p>
+        <div id="result-qr" class="lead-qr"></div>
+        <div class="wechat-id">扫码即可参与测评</div>
+      </div>
+
+      <div class="result-actions">
+        <button id="restart-btn" class="btn-secondary">重新测评</button>
+        <button id="share-btn" class="btn-primary">分享结果</button>
+      </div>
+
+      <div class="footer-note">结果仅供参考，具体招生信息以院校官方公布为准</div>
+    </section>
+  </div>
+
+  <script src="assets/schools-data.js"></script>
+  <script src="assets/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
